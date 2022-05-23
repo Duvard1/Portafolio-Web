@@ -1,0 +1,522 @@
+body{
+    background-size: cover;
+    color: #000;
+    font-family: 'Sen', sans-serif;
+    font-size: 14px;
+    background-color: var(--colorPrincipal);
+}
+
+
+/*         VARIABLES         */
+:root{
+    --colorPrincipal: #E1E2E4;
+
+    --colorNaranja: #D85B19;
+    --colorAzul:#1C366F;
+    --colorRozado:#B54279;
+    --colorAmarillo:#f7d020;
+}
+/*     TERMINA   VARIABLES    */
+
+/*          NAVEGACION         */
+
+/*   NAVEGACION--COMPUTADORA   */
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.NavContainer{
+    background-color:var(--colorNaranja);
+    display: flex;
+    max-width: 900px;
+    min-width: 500px;
+    box-shadow: 0px 0px 8px 0px var(--colorNaranja);
+    height: 60px;
+    align-items: center;
+    position: relative;
+    animation-name: desplazarNav;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+}
+
+.NavContainer ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    margin-left: auto;
+}
+
+.NavContainer__Li{
+    display: inline-block;
+    padding: 10px;
+    height:36px;
+    margin: 10px 0;
+
+}
+
+.NavContainer__Li a {
+    color: var(--colorPrincipal);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+.NavContainer__Li:hover > a{
+    color: black ;
+}
+
+@keyframes desplazarNav {
+    from{
+        top: -60px;
+    }
+    to{
+        top: 0px;
+    }
+}
+/*  TERMINA  NAVEGACION--COMPUTADORA  */
+
+/*       NAVEGACION--MOVIL     */
+    
+@media only screen and (max-width:415px){
+    header{
+        display: none;
+    }
+}
+/*    TERMINA  NAVEGACION--MOVIL    */
+
+/*        TERMINA  NAVEGACION        */
+
+/*            PRESENTACION          */
+
+.InfoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 10px 25px;
+}
+
+.InfoContainer div{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0px;
+    height: 350px;
+    margin: 0px 15px;
+
+}
+
+.InfoContainer__img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.InfoContainer__img--name{
+    width: 275px;
+}
+
+.InfoContainer__Presentacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.InfoContainer__Presentacion h2{
+    text-align: left;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.InfoContainer__Presentacion p {
+    margin: 15px 0px;
+}
+
+@media only screen and (max-width:415px){
+    .InfoContainer__Presentacion h2{
+        text-align: center;
+    }
+    .InfoContainer__Presentacion p{
+        text-align: center;
+    }
+}
+
+/*        TERMINA  PRESENTACION      */
+
+/*             PROYECTOS             */
+
+.ProjectsContainer {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1050px;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+.ProjectsContainer > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 1050px;
+}
+
+.ProjectsContainer div h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.ProjectsContainer div p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*        PROYECTOS  INDIVIDUALES       */
+
+.ProjectsContainer__div > div{
+    width: 310px;
+    height: 310px;
+    margin: 12px;
+    background-color: var(--colorAzul);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: var(--colorPrincipal);
+}
+
+.ProjectsContainer__Project2 div{
+    padding: 15px 25px;
+    margin: auto;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.ProjectsContainer__Project3 div{
+    padding: 15px 25px;
+    margin: auto;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.ProjectsContainer__Project2 div:hover{
+    background-color: var(--colorRozado);
+}
+
+.ProjectsContainer__Project3 div:hover{
+    background-color: var(--colorRozado);
+}
+
+/*            PROYECTO 1          */
+
+.DescriptionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    width: 300px;
+    height: 150px;
+    padding: 15px;
+}
+
+.DescriptionContainer h3 {
+    margin: 15px;
+}
+
+.ProjectsContainer__div div ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: space-evenly;
+    height: 40px;
+    align-content: center;
+    margin-top: auto;
+}
+
+/*     RESET AL ESTILO DE LISTA    */
+.Project1Container__ul li  {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.Project1Container__ul li a{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    padding: 10px;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.Project1Container__ul li a:hover{
+    background-color: var(--colorRozado);
+}
+
+
+@media only screen and (max-width:415px){
+    .ProjectsContainer{
+        width: 360px;
+    }
+    .ProjectsContainer > div{
+        width: 350px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .ProjectsContainer__div > div{
+        height: 225px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*         TERMINA  PROYECTOS        */
+
+/*            HABILIDADES            */
+
+.SkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1050px;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+.SkillsContainer h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.SkillsContainer > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    color: var(--colorPrincipal);
+}
+
+.SkillContainer__div div img{
+    height: 120px;
+    object-fit: contain;
+}
+
+.SkillContainer__div div h3{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SkillContainer__div div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.SkillsContainer > div div{
+    width: 310px;
+    height: 310px;
+    margin: 12px;
+    background-color: var(--colorAzul);
+}
+
+
+@media only screen and (max-width:415px) {
+    .SkillsContainer > div div{
+        height: 235px;
+    }
+}
+
+
+/*          TERMINA  HABILIDADES        */
+
+/*               CONTACTO               */
+
+.ContactContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.ContactContainer h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.ContactContainer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+}
+
+.ContactContainer__form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 625px;
+    justify-content: center;
+    margin: 15px;
+    background-color: var(--colorAzul);
+    padding: 30px;
+    box-shadow: 0px 0px 8px 0px var(--colorAzul);
+}
+
+.ContactContainer__form input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin: 10px;
+    border-bottom: 3px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+}
+
+.ContactContainer__form textarea{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin: 10px;
+    border-bottom: 3px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    height: 150px;
+    resize: none;
+}
+
+.ContactContainer__form input:focus{
+    border-bottom: 3px solid var(--colorAmarillo);
+}
+
+.ContactContainer__form textarea:focus{
+    border-bottom: 3px solid var(--colorAmarillo);
+}
+
+.ContactContainer button{
+    margin: 20px 6px 0px 6px;
+    color: var(--colorPrincipal);
+    background-color: inherit;
+    padding: 12px 24px;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.ContactContainer button:hover{
+    background-color: var(--colorAmarillo);
+}
+
+/*          TERMINA  CONTACTO         */
+
+/*            REDES  SOCIALES         */
+
+.SocialNetworksContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    background-color: rgb(61, 205, 241);
+    height: 80px;
+    margin: 18px auto 0px;
+    align-content: space-around;
+    box-shadow: 0px 0px 8px 0px rgb(61, 205, 241);
+    justify-content: center;
+    position: relative;
+}
+
+.TitleSN{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px 0px;
+}
+
+.SocialNetworksContainer > div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 225px;
+}
+
+.SocialNetworksContainer div div{
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:415px) {
+    .SocialNetworksContainer{
+        width: 320px;
+    }
+
+}
+
+
+
+
+
+/*          TERMINA REDES SOCIALES        */
+
+/*                 ICONOS                 */
+
+.fa-whatsapp{
+    color: #00bb2d;
+    font-size: 28px;
+}
+
+.fa-github{
+    font-size: 28px;
+    color: #eee;  
+}
+
+.fa-linkedin-in{
+    font-size: 28px;
+    color: #0e76a8;
+}
+
+.fa-instagram{
+    font-size: 28px;
+    color: #ff0080;
+}
+/*             TERMINA  ICONOS            */
